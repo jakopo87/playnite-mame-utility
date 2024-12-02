@@ -43,11 +43,7 @@ namespace MAMEUtility.Services.Engine
                 // Rename machines
                 foreach (Game game in selectedGames)
                 {
-                    RomsetMachine mameMachine = MachinesService.findMachineByPlayniteGame(machines, game);
-                    if(mameMachine.romName == "buckrogn")
-                    {
-                        int a = 0;
-                    }     
+                    RomsetMachine mameMachine = MachinesService.findMachineByPlayniteGame(machines, game);   
                     if (mameMachine != null && mameMachine.isGame())
                     {
                         renameGame(game, mameMachine, extraInfo);
