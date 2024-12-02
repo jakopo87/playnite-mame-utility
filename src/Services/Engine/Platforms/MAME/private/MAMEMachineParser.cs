@@ -43,6 +43,9 @@ namespace MAMEUtility.Services.Engine
             if (machineXmlNode.Attributes["isdevice"]     != null) machine.isDevice     = getBoolFromYesNo(machineXmlNode.Attributes["isdevice"].Value);
             if (machineXmlNode.Attributes["ismechanical"] != null) machine.isMechanical = getBoolFromYesNo(machineXmlNode.Attributes["ismechanical"].Value);
 
+            var yearXmlNode = machineXmlNode.SelectSingleNode("./year");
+            if(yearXmlNode != null) machine.year= yearXmlNode.InnerText;
+
             return machine;
         }
 

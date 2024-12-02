@@ -44,6 +44,11 @@ namespace MAMEUtility.Configuration
                 },
                 new MainMenuItem
                 {
+                    MenuSection = "@" + MAMEUtilityPlugin.PluginName + "|Metadata",
+                    Description = "Set (metadata) years of selected Games",
+                    Action = (args) => GameMetadataManager.setMetaDataOfSelectedGames(GameMetadataManager.MetaDataType.Year)
+                },new MainMenuItem
+                {
                     MenuSection = "@" + MAMEUtilityPlugin.PluginName + "|Media",
                     Description = "Set (extrametadata) videos of selected Games",
                     Action = (args) => GameMediaManager.setExtraMetaDataOfSelectedGames(GameMediaManager.ExtraMetaDataType.Video)
@@ -78,7 +83,7 @@ namespace MAMEUtility.Configuration
                     Description = "Remove clone Games from selection",
                     Action = (args) => GameCleaner.removeSelectedCloneGames()
                 },
-                                new MainMenuItem
+                new MainMenuItem
                 {
                     MenuSection = "@" + MAMEUtilityPlugin.PluginName + "|Cleaner",
                     Description = "Remove mechanical Games from selection",
